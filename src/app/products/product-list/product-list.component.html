@@ -1,0 +1,37 @@
+
+<ion-content>
+  <ion-grid>
+    <ion-row >
+      <ion-col *ngFor="let product of productList" size-xs="12" size-sm="12"  size-md="6" size-lg="4">
+        <ion-card class="productBox"> 
+          <div class="imageBox">
+            <img src="{{product.image}}"/>
+          </div>
+          <ion-card-header>
+            <ion-card-subtitle class="description">{{product.title}}</ion-card-subtitle>
+            <ion-card-title>
+              <ion-chip color="primary">
+                <ion-label color="dark">{{product.price | currency }}</ion-label>
+              </ion-chip>
+             </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+             
+            <ion-button size="small"> 
+              <ion-icon  name="cart"></ion-icon>
+              Add
+            </ion-button>
+            
+            <ion-button [routerLink]="[product.id]" size="small" color="light">
+              More
+              <ion-icon name="eye"></ion-icon>
+            </ion-button>
+        </ion-card-content>
+         </ion-card>
+      </ion-col>
+     
+    </ion-row>
+    </ion-grid>
+  
+
+</ion-content>

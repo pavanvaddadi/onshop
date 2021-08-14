@@ -1,0 +1,33 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card *ngIf="productItem" class="productBox">
+         
+              <img src="{{productItem.image}}"/>
+   
+          <ion-card-header> 
+            <ion-card-subtitle class="header">
+              {{productItem.title}}
+              <span class="m-2">
+              <ion-chip color="secondary">
+                <ion-label color="dark"> {{ productItem.price | currency}}</ion-label>
+              </ion-chip>
+            </span>
+            </ion-card-subtitle>
+            <ion-card-title class="description">
+              {{productItem.description}}
+             </ion-card-title>
+          </ion-card-header>
+            <ion-card-content>
+             
+              
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+     
+    </ion-row>
+    </ion-grid>
+  
+
+</ion-content>

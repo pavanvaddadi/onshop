@@ -1,0 +1,22 @@
+
+<ion-header *ngIf="tokenService.authToken">
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-toggle>
+          <ion-button>
+            <ion-icon slot="icon-only" name="menu"></ion-icon>
+          </ion-button>
+        </ion-menu-toggle>
+      </ion-buttons>
+      <ion-buttons slot="end">
+       <ion-button class="badgeBox">
+          <ion-icon name="basket-outline" size="large"></ion-icon>
+          <ion-badge color="danger" class="badge">66</ion-badge>
+        </ion-button>
+        <ion-button (click)="showPopover($event)">
+          <ion-icon name="person-circle-sharp" size="large"></ion-icon>
+          <span>Pavan Kumar</span>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>

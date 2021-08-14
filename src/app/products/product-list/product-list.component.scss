@@ -1,0 +1,33 @@
+
+.productBox {
+    .imageBox {
+        display: block;
+        background-color: aliceblue;
+        text-align: center;
+        & img {
+            height: 8rem;
+            max-width: 8rem;
+            padding: 1rem;
+        }
+    
+    }
+
+   & .header {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+     & .description {
+        max-width: 20rem;
+       
+        white-space: nowrap;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: darkgrey;
+     }
+}
+
+
+

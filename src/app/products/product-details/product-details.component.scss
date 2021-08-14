@@ -1,0 +1,37 @@
+
+
+.productBox {
+    display: flex;
+    align-items: center;
+
+    & img {
+        height: 18rem;
+        padding: 2rem;
+    }
+
+   & .header {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+     & .description {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: darkgrey;
+     }
+}
+
+
+@media all and (max-width: 480px) and (min-width: 576px) , (max-width: 756px) {
+    .productBox {
+        display: block;
+
+
+    & img {
+        height: 18rem;
+        padding: 2rem;
+        display: flex;
+        margin: auto;
+    }
+
+  }
+}

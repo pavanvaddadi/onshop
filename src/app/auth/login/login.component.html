@@ -1,0 +1,23 @@
+<ion-content>
+  <ion-card class="wrapper loginBox">
+    <ion-card-header color="primary">
+        <ion-card-title>Login Here</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+      <ion-item lines="full">
+        <ion-label position="floating">UserName</ion-label>
+        <ion-input type="text"  [(ngModel)]="userName" required></ion-input>
+      </ion-item>
+    <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password" required></ion-input>
+      </ion-item>
+      <ion-row>
+          <ion-col>
+            <ion-button type="submit" color="primary" expand="block" (click)="login()">Sign In</ion-button>
+            <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+</ion-content>
