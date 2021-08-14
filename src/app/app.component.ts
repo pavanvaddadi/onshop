@@ -1,4 +1,7 @@
+import { TokenService } from './core/_services/token.service';
 import { Component } from '@angular/core';
+import { PopoverController } from '@ionic/angular';
+import { PopOverComponent } from './shared/pop-over/pop-over.component';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -14,5 +17,19 @@ export class AppComponent {
     { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+  public data: Array<Object>;
+  constructor(private popoverCtrl: PopoverController , private tokenService: TokenService) {}
+
+  async showPopover(event) {
+    this.data =  [ {icon: 'mail', title: 'Profile'},
+                  {icon: 'mail', title: 'My Orders'},
+                {icon: 'mail', title: 'Wish List'},
+                {icon: 'mail', title: 'Logout'}];
+    let  popover = await this.popoverCtrl.create({
+      component: PopOverComponent,
+      componentProps:  this.data,
+      event
+     });
+    await popover.present();
+  }
 }
